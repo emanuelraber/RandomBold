@@ -13,6 +13,6 @@
 - Gets random advices from [here](https://api.adviceslip.com/advice)
 - Randomizes the text to insert random bold characters within the text
 
-![alt text](01.png)
+![alt text](docs/img/01.png)
 
-![alt text](02.png)
+![alt text](docs/img/02.png)
