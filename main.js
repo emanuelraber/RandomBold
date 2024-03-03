@@ -26,20 +26,22 @@ async function GetData() {
     const fact = await response.json();
 
     ChangeText.innerHTML = fact.slip.advice;
-    TransformText();
+
+    var Offset = getRandomInt(6, 9);
+    TransformText(Offset);
 
 }
 
-function TransformText() {
+function TransformText(offset) {
 
     TransformedText.innerText = "";
 
     const TextToTransform = ChangeText.innerText
 
-    let LastAppliedId = 0;
+    const Symbols = [',', '.', "'", '"'];
 
-    var Offset = getRandomInt(6, 9);
-    console.log("Offset: " + Offset)
+
+    let LastAppliedId = 0;
 
     for (let i = 0; i < TextToTransform.length; i++) {
 
@@ -56,9 +58,12 @@ function TransformText() {
 
         } else {
 
-            if (i - LastAppliedId == Offset) {
+            if (i - LastAppliedId == offset) {
 
-                if (letter != [",", ".", "'", '"']) {
+                if (Symbols.includes(letter)) {
+                    // 
+                }
+                else {
                     span.classList.add("alt");
                     LastAppliedId = i;
                 }
@@ -102,5 +107,6 @@ function RetryAction() {
 }
 
 function RandomizeAction() {
-    TransformText();
+    var Offset = getRandomInt(6, 9);
+    TransformText(Offset);
 }
