@@ -38,7 +38,7 @@ function TransformText(offset) {
 
     const TextToTransform = ChangeText.innerText
 
-    const Symbols = [',', '.', "'", '"'];
+    const Symbols = [',', '.', "'", '"', '-'];
 
 
     let LastAppliedId = 0;
