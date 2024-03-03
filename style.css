@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-inline: 1rem;
+  font-family: "Archivo", sans-serif;
+}
+
+h4 {
+  color: gray;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 33%;
+}
+
+.text {
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 667px) {
+  .container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .content {
+    width: 90%;
+  }
+
+  .text {
+    min-width: 90%;
+    font-size: 1.5rem;
+  }
+}
+
+button {
+  cursor: pointer;
+  padding-inline: 1.5rem;
+  padding-block: 0.75rem;
+  border-radius: 0.75rem;
+  margin-inline-end: auto;
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  border-width: 0.01rem;
+}
+button:hover {
+  background-color: white;
+  color: black;
+}
+.disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.alt {
+  font-weight: 900;
+}
